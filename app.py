@@ -1,10 +1,13 @@
 from flask import Flask
+from requests import requests
 import os
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello():
+    response = requests.get("https://api.open-notify.org/this-api-doesnt-exist")
+    print(response.status_code)
     return "Hello World!"
 
 if __name__ == '__main__':
