@@ -1,5 +1,5 @@
 from flask import Flask
-from requests import requests
+import requests
 import os
 
 app = Flask(__name__)
